@@ -12,6 +12,16 @@ class WeatherEventCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var secondContentView: UIView!
 	
+	override var isSelected: Bool {
+		didSet {
+			if isSelected {
+				selectCell()
+			} else {
+				deselectCell()
+			}
+		}
+	}
+	
 	var weatherEvent: WeatherEventModel? {
 		didSet {
 			if let unwrappedEvent = weatherEvent {

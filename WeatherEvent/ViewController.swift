@@ -19,15 +19,17 @@ class ViewController: UIViewController {
 	@IBOutlet weak var persisLabel: UILabel!
 	
 	var events: [WeatherEventModel] = []
-	var selectedEvent: IndexPath = IndexPath(row: 0, section: 0)
+	var selectedEventIndex: IndexPath = IndexPath(row: 0, section: 0)
 	
-	var scene: WeatherScene?
+	var scenes: [WeatherEvent: WeatherSceneControllerProtocol] = [:]
+	var selectedScene: WeatherSceneControllerProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 		setupEvents()
         setupWeatherEventCollectionView()
         setupScene()
+		setRandomScene()
     }
 
     private func setupWeatherEventCollectionView() {
@@ -39,16 +41,23 @@ class ViewController: UIViewController {
 		weatherEventsCollectionView.collectionViewLayout = layout
         weatherEventsCollectionView.delegate = self
         weatherEventsCollectionView.dataSource = self
+		weatherEventsCollectionView.allowsSelection = true
         
     }
     
     private func setupScene() {
-        if let scene = WeatherScene(fileNamed: "Scene.sks") {
-			self.scene = scene
-			
-			scene.drawEvent(.clear)
-            skSceneView.presentScene(scene)
-        }
+		let clearScene = ClearSceneController(fileNamed: "ClearScene.sks")
+		let rainScene = RainSceneController(fileNamed: "RainScene.sks")
+		let stormScene = StormSceneController(fileNamed: "StormScene.sks")
+		let fogScene = FogSceneController(fileNamed: "FogScene.sks")
+		let snowfallScene = SnowfallSceneController(fileNamed: "SnowfallScene.sks")
+		
+		scenes[.clear] = clearScene
+		scenes[.rain] = rainScene
+		scenes[.storm] = stormScene
+		scenes[.fog] = fogScene
+		scenes[.snowfall] = snowfallScene
+		
     }
 	
 	private func setupEvents() {
@@ -56,27 +65,48 @@ class ViewController: UIViewController {
 		events.append(WeatherEventModel(id: .rain, title: "Rain", icon: "cloud.rain"))
 		events.append(WeatherEventModel(id: .storm, title: "Storm", icon: "cloud.bolt.rain"))
 		events.append(WeatherEventModel(id: .fog, title: "Fog", icon: "cloud.fog"))
+		events.append(WeatherEventModel(id: .snowfall, title: "Snowfall", icon: "cloud.snow"))
+	}
+	
+	private func selectScene(id: WeatherEvent) {
+		
+		selectedScene?.stopAnimation()
+		selectedScene = scenes[id]
+		selectedScene?.startAnimation()
+		
+		skSceneView.showsFPS = true
+		skSceneView.presentScene(selectedScene)
+	}
+	
+	private func setRandomScene() {
+		if let event = events.randomElement() {
+			let index = events.firstIndex { $0.id == event.id }!
+			events[index].isSelected = true
+			selectedEventIndex.row = index
+			
+			selectScene(id: event.id)
+		}
 	}
 	
 	@IBAction func freqSliderChanged(_ sender: UISlider) {
-		scene?.sourceNoise.frequency = Double(sender.value)
+//		scene?.sourceNoise.frequency = Double(sender.value)
 		freqLabel.text = "Freq \(sender.value)"
 	}
 	
 	@IBAction func octSliderChanged(_ sender: UISlider) {
-		scene?.sourceNoise.octaveCount = Int(sender.value)
+//		scene?.sourceNoise.octaveCount = Int(sender.value)
 		octLabel.text = "Oct \(sender.value)"
 	}
 	
 	
 	@IBAction func lacunSliderChanged(_ sender: UISlider) {
-		scene?.sourceNoise.lacunarity = Double(sender.value)
+//		scene?.sourceNoise.lacunarity = Double(sender.value)
 		lacunLabel.text = "Lacun \(sender.value)"
 	}
 	
 	
 	@IBAction func persisSliderChanged(_ sender: UISlider) {
-		scene?.sourceNoise.persistence = Double(sender.value)
+//		scene?.sourceNoise.persistence = Double(sender.value)
 		persisLabel.text = "Persis \(sender.value)"
 	}
 	
@@ -92,22 +122,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! WeatherEventCollectionViewCell
         
 		cell.weatherEvent = events[indexPath.row]
-        
-		if indexPath == selectedEvent {
-			cell.selectCell()
-		}
 		
         return cell
     }
     
+	func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+		events[indexPath.row].isSelected = false
+	}
+	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		(collectionView.cellForItem(at: selectedEvent) as? WeatherEventCollectionViewCell)?.deselectCell()
-		selectedEvent = indexPath
-		(collectionView.cellForItem(at: indexPath) as? WeatherEventCollectionViewCell)?.selectCell()
-		
-		if let scene = scene {
-			scene.drawEvent(events[indexPath.row].id)
-		}
+		selectedEventIndex = indexPath
+		events[selectedEventIndex.row].isSelected = true
+		selectScene(id: events[indexPath.row].id)
 	}
     
 	

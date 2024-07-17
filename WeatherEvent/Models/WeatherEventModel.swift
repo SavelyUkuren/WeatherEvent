@@ -8,11 +8,12 @@
 import Foundation
 
 enum WeatherEvent: Int {
-	case clear, rain, storm, fog
+	case clear, rain, storm, fog, snowfall
 }
 
 struct WeatherEventModel: Identifiable {
 	var id: WeatherEvent
 	var title: String
 	var icon: String
+	var isSelected: Bool = false
 }

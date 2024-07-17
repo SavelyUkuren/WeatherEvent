@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1B5CBE2C47DA4B00C7C105 /* ClearScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A1B5CBD2C47DA4B00C7C105 /* ClearScene.sks */; };
+		7A1B5CC02C47DA6F00C7C105 /* ClearSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B5CBF2C47DA6F00C7C105 /* ClearSceneController.swift */; };
+		7A1B5CC32C47DF6700C7C105 /* RainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A1B5CC22C47DF6700C7C105 /* RainScene.sks */; };
+		7A1B5CC52C47DF7000C7C105 /* RainSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B5CC42C47DF7000C7C105 /* RainSceneController.swift */; };
+		7A1B5CC82C47E0FC00C7C105 /* StormScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A1B5CC72C47E0FC00C7C105 /* StormScene.sks */; };
+		7A1B5CCA2C47E11900C7C105 /* StrormSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B5CC92C47E11900C7C105 /* StrormSceneController.swift */; };
+		7A1B5CCC2C47EBD400C7C105 /* WeatherSceneControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B5CCB2C47EBD400C7C105 /* WeatherSceneControllerProtocol.swift */; };
+		7A1B5CCF2C47EE5800C7C105 /* FogScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A1B5CCE2C47EE5800C7C105 /* FogScene.sks */; };
+		7A1B5CD12C47EE6300C7C105 /* FogSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B5CD02C47EE6300C7C105 /* FogSceneController.swift */; };
+		7A1B5CD62C47F09900C7C105 /* SnowfallScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A1B5CD52C47F09900C7C105 /* SnowfallScene.sks */; };
+		7A1B5CD82C47F0A300C7C105 /* SnowfallSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B5CD72C47F0A300C7C105 /* SnowfallSceneController.swift */; };
 		7AADAB3A2C46927B00BD6101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AADAB392C46927B00BD6101 /* AppDelegate.swift */; };
 		7AADAB3C2C46927B00BD6101 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AADAB3B2C46927B00BD6101 /* SceneDelegate.swift */; };
 		7AADAB3E2C46927B00BD6101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AADAB3D2C46927B00BD6101 /* ViewController.swift */; };
@@ -15,12 +26,21 @@
 		7AADAB462C46927E00BD6101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AADAB452C46927E00BD6101 /* Assets.xcassets */; };
 		7AADAB492C46927E00BD6101 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7AADAB482C46927E00BD6101 /* Base */; };
 		7AADAB542C46991B00BD6101 /* WeatherEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AADAB532C46991B00BD6101 /* WeatherEventCollectionViewCell.swift */; };
-		7ACA9ADB2C46DBA10024F9D6 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7ACA9ADA2C46DBA10024F9D6 /* Scene.sks */; };
-		7ACA9ADD2C46DD850024F9D6 /* WeatherScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA9ADC2C46DD850024F9D6 /* WeatherScene.swift */; };
 		7ACA9AE02C46F49E0024F9D6 /* WeatherEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA9ADF2C46F49E0024F9D6 /* WeatherEventModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A1B5CBD2C47DA4B00C7C105 /* ClearScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ClearScene.sks; sourceTree = "<group>"; };
+		7A1B5CBF2C47DA6F00C7C105 /* ClearSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearSceneController.swift; sourceTree = "<group>"; };
+		7A1B5CC22C47DF6700C7C105 /* RainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RainScene.sks; sourceTree = "<group>"; };
+		7A1B5CC42C47DF7000C7C105 /* RainSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainSceneController.swift; sourceTree = "<group>"; };
+		7A1B5CC72C47E0FC00C7C105 /* StormScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StormScene.sks; sourceTree = "<group>"; };
+		7A1B5CC92C47E11900C7C105 /* StrormSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrormSceneController.swift; sourceTree = "<group>"; };
+		7A1B5CCB2C47EBD400C7C105 /* WeatherSceneControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSceneControllerProtocol.swift; sourceTree = "<group>"; };
+		7A1B5CCE2C47EE5800C7C105 /* FogScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FogScene.sks; sourceTree = "<group>"; };
+		7A1B5CD02C47EE6300C7C105 /* FogSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogSceneController.swift; sourceTree = "<group>"; };
+		7A1B5CD52C47F09900C7C105 /* SnowfallScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowfallScene.sks; sourceTree = "<group>"; };
+		7A1B5CD72C47F0A300C7C105 /* SnowfallSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowfallSceneController.swift; sourceTree = "<group>"; };
 		7AADAB362C46927B00BD6101 /* WeatherEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AADAB392C46927B00BD6101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AADAB3B2C46927B00BD6101 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,8 +51,6 @@
 		7AADAB482C46927E00BD6101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AADAB4A2C46927E00BD6101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AADAB532C46991B00BD6101 /* WeatherEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEventCollectionViewCell.swift; sourceTree = "<group>"; };
-		7ACA9ADA2C46DBA10024F9D6 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
-		7ACA9ADC2C46DD850024F9D6 /* WeatherScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherScene.swift; sourceTree = "<group>"; };
 		7ACA9ADF2C46F49E0024F9D6 /* WeatherEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEventModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +65,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A1B5CBB2C47DA1800C7C105 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7A1B5CCB2C47EBD400C7C105 /* WeatherSceneControllerProtocol.swift */,
+				7A1B5CD42C47F07700C7C105 /* Snowfall */,
+				7A1B5CCD2C47EE4A00C7C105 /* FogScene */,
+				7A1B5CC62C47E0ED00C7C105 /* StormScene */,
+				7A1B5CC12C47DF5800C7C105 /* RainScene */,
+				7A1B5CBC2C47DA2700C7C105 /* ClearScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7A1B5CBC2C47DA2700C7C105 /* ClearScene */ = {
+			isa = PBXGroup;
+			children = (
+				7A1B5CBD2C47DA4B00C7C105 /* ClearScene.sks */,
+				7A1B5CBF2C47DA6F00C7C105 /* ClearSceneController.swift */,
+			);
+			path = ClearScene;
+			sourceTree = "<group>";
+		};
+		7A1B5CC12C47DF5800C7C105 /* RainScene */ = {
+			isa = PBXGroup;
+			children = (
+				7A1B5CC22C47DF6700C7C105 /* RainScene.sks */,
+				7A1B5CC42C47DF7000C7C105 /* RainSceneController.swift */,
+			);
+			path = RainScene;
+			sourceTree = "<group>";
+		};
+		7A1B5CC62C47E0ED00C7C105 /* StormScene */ = {
+			isa = PBXGroup;
+			children = (
+				7A1B5CC72C47E0FC00C7C105 /* StormScene.sks */,
+				7A1B5CC92C47E11900C7C105 /* StrormSceneController.swift */,
+			);
+			path = StormScene;
+			sourceTree = "<group>";
+		};
+		7A1B5CCD2C47EE4A00C7C105 /* FogScene */ = {
+			isa = PBXGroup;
+			children = (
+				7A1B5CCE2C47EE5800C7C105 /* FogScene.sks */,
+				7A1B5CD02C47EE6300C7C105 /* FogSceneController.swift */,
+			);
+			path = FogScene;
+			sourceTree = "<group>";
+		};
+		7A1B5CD22C47EF9F00C7C105 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7A1B5CD32C47EFA700C7C105 /* Views */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7A1B5CD32C47EFA700C7C105 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7AADAB532C46991B00BD6101 /* WeatherEventCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A1B5CD42C47F07700C7C105 /* Snowfall */ = {
+			isa = PBXGroup;
+			children = (
+				7A1B5CD52C47F09900C7C105 /* SnowfallScene.sks */,
+				7A1B5CD72C47F0A300C7C105 /* SnowfallSceneController.swift */,
+			);
+			path = Snowfall;
+			sourceTree = "<group>";
+		};
 		7AADAB2D2C46927B00BD6101 = {
 			isa = PBXGroup;
 			children = (
@@ -66,13 +158,13 @@
 		7AADAB382C46927B00BD6101 /* WeatherEvent */ = {
 			isa = PBXGroup;
 			children = (
+				7A1B5CD22C47EF9F00C7C105 /* Helpers */,
 				7ACA9ADE2C46F4930024F9D6 /* Models */,
 				7AADAB502C46944800BD6101 /* Resources */,
+				7A1B5CBB2C47DA1800C7C105 /* Scenes */,
 				7AADAB392C46927B00BD6101 /* AppDelegate.swift */,
 				7AADAB3B2C46927B00BD6101 /* SceneDelegate.swift */,
 				7AADAB3D2C46927B00BD6101 /* ViewController.swift */,
-				7ACA9ADC2C46DD850024F9D6 /* WeatherScene.swift */,
-				7AADAB532C46991B00BD6101 /* WeatherEventCollectionViewCell.swift */,
 				7AADAB4A2C46927E00BD6101 /* Info.plist */,
 			);
 			path = WeatherEvent;
@@ -81,7 +173,6 @@
 		7AADAB502C46944800BD6101 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7ACA9ADA2C46DBA10024F9D6 /* Scene.sks */,
 				7AADAB3F2C46927B00BD6101 /* Main.storyboard */,
 				7AADAB452C46927E00BD6101 /* Assets.xcassets */,
 				7AADAB472C46927E00BD6101 /* LaunchScreen.storyboard */,
@@ -156,9 +247,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A1B5CC32C47DF6700C7C105 /* RainScene.sks in Resources */,
+				7A1B5CBE2C47DA4B00C7C105 /* ClearScene.sks in Resources */,
 				7AADAB462C46927E00BD6101 /* Assets.xcassets in Resources */,
+				7A1B5CC82C47E0FC00C7C105 /* StormScene.sks in Resources */,
+				7A1B5CD62C47F09900C7C105 /* SnowfallScene.sks in Resources */,
 				7AADAB492C46927E00BD6101 /* Base in Resources */,
-				7ACA9ADB2C46DBA10024F9D6 /* Scene.sks in Resources */,
+				7A1B5CCF2C47EE5800C7C105 /* FogScene.sks in Resources */,
 				7AADAB412C46927B00BD6101 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,12 +266,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AADAB542C46991B00BD6101 /* WeatherEventCollectionViewCell.swift in Sources */,
+				7A1B5CD12C47EE6300C7C105 /* FogSceneController.swift in Sources */,
+				7A1B5CCA2C47E11900C7C105 /* StrormSceneController.swift in Sources */,
 				7AADAB3E2C46927B00BD6101 /* ViewController.swift in Sources */,
+				7A1B5CD82C47F0A300C7C105 /* SnowfallSceneController.swift in Sources */,
 				7AADAB3A2C46927B00BD6101 /* AppDelegate.swift in Sources */,
 				7AADAB3C2C46927B00BD6101 /* SceneDelegate.swift in Sources */,
 				7ACA9AE02C46F49E0024F9D6 /* WeatherEventModel.swift in Sources */,
+				7A1B5CCC2C47EBD400C7C105 /* WeatherSceneControllerProtocol.swift in Sources */,
 				7AADAB442C46927B00BD6101 /* WeatherEvent.xcdatamodeld in Sources */,
-				7ACA9ADD2C46DD850024F9D6 /* WeatherScene.swift in Sources */,
+				7A1B5CC52C47DF7000C7C105 /* RainSceneController.swift in Sources */,
+				7A1B5CC02C47DA6F00C7C105 /* ClearSceneController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
