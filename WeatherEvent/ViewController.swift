@@ -56,11 +56,11 @@ class ViewController: UIViewController {
     }
 	
 	private func setupEvents() {
-		events.append(WeatherEventModel(id: .clear, title: "Clear", icon: "sun.max"))
-		events.append(WeatherEventModel(id: .rain, title: "Rain", icon: "cloud.rain"))
-		events.append(WeatherEventModel(id: .storm, title: "Storm", icon: "cloud.bolt.rain"))
-		events.append(WeatherEventModel(id: .fog, title: "Fog", icon: "cloud.fog"))
-		events.append(WeatherEventModel(id: .snowfall, title: "Snowfall", icon: "cloud.snow"))
+		events.append(WeatherEventModel(id: .clear, title: NSLocalizedString("w_Clear", comment: ""), icon: "sun.max"))
+		events.append(WeatherEventModel(id: .rain, title: NSLocalizedString("w_Rain", comment: ""), icon: "cloud.rain"))
+		events.append(WeatherEventModel(id: .storm, title: NSLocalizedString("w_Storm", comment: ""), icon: "cloud.bolt.rain"))
+		events.append(WeatherEventModel(id: .fog, title: NSLocalizedString("w_Fog", comment: ""), icon: "cloud.fog"))
+		events.append(WeatherEventModel(id: .snowfall, title: NSLocalizedString("w_Snowfall", comment: ""), icon: "cloud.snow"))
 	}
 	
 	private func selectScene(id: WeatherEvent) {
