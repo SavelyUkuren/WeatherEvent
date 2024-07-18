@@ -34,7 +34,6 @@ class ClearSceneController: SKScene, WeatherSceneControllerProtocol {
 		gradient = childNode(withName: "gradient") as? SKSpriteNode
 		
 		sun = childNode(withName: "sun") as? SKSpriteNode
-		sun?.position = CGPoint(x: -size.width / 5, y: size.height / 6)
 		
 		setupNoise()
 		

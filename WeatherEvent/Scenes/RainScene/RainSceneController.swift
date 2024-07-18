@@ -47,7 +47,7 @@ class RainSceneController: ClearSceneController {
 	override func startAnimation() {
 		super.startAnimation()
 		emitterSpeed = -2000
-		particleCount = 700
+		particleCount = 400
 	}
 	
 	override func stopAnimation() {

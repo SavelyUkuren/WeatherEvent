@@ -12,11 +12,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var weatherEventsCollectionView: UICollectionView!
     @IBOutlet weak var skSceneView: SKView!
-    
-	@IBOutlet weak var freqLabel: UILabel!
-	@IBOutlet weak var octLabel: UILabel!
-	@IBOutlet weak var lacunLabel: UILabel!
-	@IBOutlet weak var persisLabel: UILabel!
 	
 	var events: [WeatherEventModel] = []
 	var selectedEventIndex: IndexPath = IndexPath(row: 0, section: 0)
@@ -74,8 +69,9 @@ class ViewController: UIViewController {
 		selectedScene = scenes[id]
 		selectedScene?.startAnimation()
 		
-		skSceneView.showsFPS = true
-		skSceneView.presentScene(selectedScene)
+		if let scene = selectedScene {
+			skSceneView.presentScene(scene, transition: SKTransition.fade(withDuration: 0.5))
+		}
 	}
 	
 	private func setRandomScene() {
@@ -86,28 +82,6 @@ class ViewController: UIViewController {
 			
 			selectScene(id: event.id)
 		}
-	}
-	
-	@IBAction func freqSliderChanged(_ sender: UISlider) {
-//		scene?.sourceNoise.frequency = Double(sender.value)
-		freqLabel.text = "Freq \(sender.value)"
-	}
-	
-	@IBAction func octSliderChanged(_ sender: UISlider) {
-//		scene?.sourceNoise.octaveCount = Int(sender.value)
-		octLabel.text = "Oct \(sender.value)"
-	}
-	
-	
-	@IBAction func lacunSliderChanged(_ sender: UISlider) {
-//		scene?.sourceNoise.lacunarity = Double(sender.value)
-		lacunLabel.text = "Lacun \(sender.value)"
-	}
-	
-	
-	@IBAction func persisSliderChanged(_ sender: UISlider) {
-//		scene?.sourceNoise.persistence = Double(sender.value)
-		persisLabel.text = "Persis \(sender.value)"
 	}
 	
 }

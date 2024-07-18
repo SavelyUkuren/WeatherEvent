@@ -11,6 +11,7 @@ class WeatherEventCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var secondContentView: UIView!
+	@IBOutlet weak var imageView: UIImageView!
 	
 	override var isSelected: Bool {
 		didSet {
@@ -26,6 +27,7 @@ class WeatherEventCollectionViewCell: UICollectionViewCell {
 		didSet {
 			if let unwrappedEvent = weatherEvent {
 				titleLabel.text = unwrappedEvent.title
+				imageView.image = UIImage(systemName: unwrappedEvent.icon)
 			}
 		}
 	}
@@ -33,11 +35,13 @@ class WeatherEventCollectionViewCell: UICollectionViewCell {
 	func selectCell() {
 		secondContentView.backgroundColor = .systemBlue
 		titleLabel.textColor = .white
+		imageView.tintColor = .white
 	}
 	
 	func deselectCell() {
 		secondContentView.backgroundColor = .white
 		titleLabel.textColor = .label
+		imageView.tintColor = .systemBlue
 	}
 	
 }
